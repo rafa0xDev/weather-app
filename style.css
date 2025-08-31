@@ -1,0 +1,104 @@
+/* Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --background-color: #1a202c;
+    --card-background: #2d3748;
+    --text-color: #e2e8f0;
+    --primary-color: #4299e1;
+    --secondary-color: #a0aec0;
+    --border-color: #4a5568;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+}
+
+#app {
+    background-color: var(--card-background);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+#weather-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#location {
+    flex-grow: 1;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    border: 1px solid var(--border-color);
+    background-color: #1a202c;
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#location:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+button[type="submit"] {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 9999px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #3182ce;
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+#weather-result {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125rem;
+    color: var(--secondary-color);
+    display: none;
+}
+
+#weather-result.show {
+    display: flex;
+}
