@@ -41,12 +41,12 @@
         </div>
     </nav>
     <main class="main-content">
-        <div class="search-bar">
+        <section class="search-bar">
             <ion-icon name="search-outline"></ion-icon>
             <input type="text" placeholder="Search for a city">
-        </div>
+        </section>
 
-        <div class="current-weather">
+        <section class="current-weather">
             <div class="weather-info">
                 <div class="weather-city">
                     <h2 class="city-name">Madrid</h2>
@@ -61,10 +61,10 @@
             <div class="weather-icon">
                 <img src="sun-icon.png" alt="sunny">
             </div>
-        </div>
+        </section>
 
-        <div class="today's forecast">
-            <h3>Today's Forecast</h3>
+        <section class="today's forecast">
+            <h3 class="today's-forecast-title">Today's Forecast</h3>
 
             <div class="forecast-list">
                 <div class="forecast-item">
@@ -109,7 +109,47 @@
                     <span class="temp">25°</span>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="air-conditions">
+            <h3 class="air-condition-title">Air Condition</h3>
+
+            <button class="see-more-btn">See More</button>
+
+            <div class="conditions-list">
+                <div class="condition-item">
+                    <ion-icon name="thermometer-outline"></ion-icon>
+                    <div>
+                        <p class="label">Real Feel</p>
+                        <p class="value">30°</p>
+                    </div>
+                </div>
+
+                <div class="condition-item">
+                    <ion-icon name="leaf-outline"></ion-icon>
+                    <div>
+                        <p class="label">Wind</p>
+                        <p class="value">0.2 km/h</p>
+                    </div>
+                </div>
+
+                <div class="condition-item">
+                    <ion-icon name="water-outline"></ion-icon>
+                    <div>
+                        <p class="label">Chance of rain</p>
+                        <p class="value">0%</p>
+                    </div>
+                </div>
+
+                <div class="condition-item">
+                    <ion-icon name="sunny-outline"></ion-icon>
+                    <div>
+                        <p class="label">UV Index</p>
+                        <p class="value">3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
