@@ -4,17 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Weather App</title>
+    <title>Atmos AI</title>
 </head>
 <body>
-    <div id="app">
-        <h1>Weather App</h1>
-        <form id="weather-form">
-            <input type="text" id="location" placeholder="Enter location">
-            <button type="submit" id="get-weather">Get Weather</button>
-        </form>
-        <div id="weather-result"></div>
-    </div>
-    <script src="script.js"></script>
+    <nav class="nav-section">
+        <div class="logo">
+            <a class="home"><ion-icon name="cloudy-outline"></ion-icon></a>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li>
+                    <a href="#home">
+                        <ion-icon name="flower-outline"></ion-icon>
+                        <span>Weather</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#cities">
+                        <ion-icon name="location-outline"></ion-icon>
+                        <span>Cities</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#map">
+                        <ion-icon name="map-outline"></ion-icon>
+                        <span>Map</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#settings">
+                        <ion-icon name="settings-outline"></ion-icon>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
