@@ -18,6 +18,13 @@ body {
     justify-content: flex-start;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
 /* navbar */
 .nav-section {
     width: 70px;
@@ -96,7 +103,7 @@ body {
 .search-bar input {
     border: none;
     outline: none;
-    font-size: 16;
+    font-size: 16px;
     width: 800px;
     background: #24262b;
 }
@@ -186,7 +193,7 @@ body {
     border-radius: 15px;
     text-align: left;
     margin-top: 15px;
-    padding: 45px 25px;
+    padding: 15px 25px;
     border-left: 4px cornflowerblue solid;
     display: flex;
     flex-direction: column;
@@ -211,7 +218,19 @@ body {
 
 .conditions-list {
     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:1em;
+}
+
+.condition-item {
     display: flex;
-    flex-direction: row;
-    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.condition-item-last {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
