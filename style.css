@@ -160,6 +160,7 @@ body {
 .todays-forecast h3{
     font-size: 15px;
     margin-bottom: 13px;
+    color: #9ca3af;
 }
 
 .forecast-list {
@@ -178,6 +179,7 @@ body {
     padding: 10px;
     border-right: 2px solid grey;
     gap: 15px;
+    color: #9ca3af;
 }
 
 .forecast-item-last {
@@ -187,8 +189,10 @@ body {
     flex-direction: column;
     padding: 10px;
     gap: 15px;
+    color: #9ca3af;
 }
 
+/* air conditions  */
 .air-conditions {
     background-color: #24262b;
     border-radius: 15px;
@@ -208,6 +212,11 @@ body {
     font-size: 13px;
 }
 
+.air-condition-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #9ca3af;
+}
 .condition-top button{
     background-color: cornflowerblue;
     border: none;
@@ -234,10 +243,12 @@ body {
     align-items: center;
     gap: 8px;
     font-size: 16px;
+    color: #9ca3af;
 }
 
 .condition-label ion-icon {
     font-size: 24px;
+    color:  #9ca3af;
 }
 
 .condition-value {
@@ -255,5 +266,55 @@ body {
     padding: 20px 25px;
     width: 600px;
     border-left: 4px cornflowerblue solid;
+}
 
+.svn-day-forecast h3{
+    font-size: 15px;
+    margin: 25px 13px;
+    color:  #9ca3af;
+}
+
+.svn-day-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+}
+
+.svn-day-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.svn-day-item h5 {
+    width: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #9ca3af;
+}
+
+.forecast-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 180px;
+}
+
+.forecast-info ion-icon {
+    font-size: 40px;
+    color: white;
+}
+
+.temp-range {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.temp-range p {
+    margin-left: 5px;
+    color: #9ca3af;
 }

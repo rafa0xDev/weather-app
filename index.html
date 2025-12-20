@@ -121,12 +121,12 @@
             
                 <ul class="conditions-list">
                     <li class="condition-item">
-                        <span class="condition-label"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-83 0-141.5-58.5T280-320q0-48 21-89.5t59-70.5v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q38 29 59 70.5t21 89.5q0 83-58.5 141.5T480-120Zm0-80q50 0 85-35t35-85q0-29-12.5-54T552-416l-32-24v-280q0-17-11.5-28.5T480-760q-17 0-28.5 11.5T440-720v280l-32 24q-23 17-35.5 42T360-320q0 50 35 85t85 35Zm0-120Z"/></svg>Real Feel</span>
+                        <span class="condition-label"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill=" #9ca3af"><path d="M480-120q-83 0-141.5-58.5T280-320q0-48 21-89.5t59-70.5v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q38 29 59 70.5t21 89.5q0 83-58.5 141.5T480-120Zm0-80q50 0 85-35t35-85q0-29-12.5-54T552-416l-32-24v-280q0-17-11.5-28.5T480-760q-17 0-28.5 11.5T440-720v280l-32 24q-23 17-35.5 42T360-320q0 50 35 85t85 35Zm0-120Z"/></svg>Real Feel</span>
                         <span class="condition-value">30°</span>
                     </li>
 
                     <li class="condition-item">
-                        <span class="condition-label"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"/></svg> Wind</span>
+                        <span class="condition-label"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill=" #9ca3af"><path d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"/></svg> Wind</span>
                         <span class="condition-value">0.2 km/h</span>
                     </li>
 
@@ -144,9 +144,71 @@
         </main>
         <footer class="svn-day-forecast">
             <h3>7-Day Forecast</h3>
-
             <!-- 7-day forecast content goes here -->
-             
+             <ul class="svn-day-content">
+                <li class="svn-day-item">
+                    <h5>Today</h5>
+                    <span class="forecast-info">
+                        <ion-icon name="sunny-outline" class="forecast-icon"></ion-icon>
+                        <p>sunny</p>
+                    </span>
+                    <span class="temp-range">22° <p>/ 30°</p></span>
+                </li>
+                <hr>
+                <li class="svn-day-item">
+                    <h5>Tue</h5>
+                    <span class="forecast-info">
+                        <ion-icon name="cloudy-outline" class="forecast-icon"></ion-icon>
+                        <p>cloudy</p>
+                    </span>
+                    <span class="temp-range">21° <p>/ 28°</p></span>
+                </li>
+                <hr>
+                <li class="svn-day-item">
+                    <h5>Wed</h5>
+                    <span class="forecast-info">
+                        <ion-icon name="rainy-outline" class="forecast-icon"></ion-icon>
+                        <p>rainy</p>
+                    </span>
+                    <span class="temp-range">19° <p>/ 25°</p></span>
+                </li>
+                <hr>
+                <li class="svn-day-item">
+                    <h5>Thu</h5>
+                    <span class="forecast-info">
+                        <ion-icon name="sunny-outline" class="forecast-icon"></ion-icon>
+                        <p>sunny</p>
+                    </span>
+                    <span class="temp-range">23° <p>/ 31°</p></span>
+                </li>
+                <hr>
+                <li class="svn-day-item">
+                    <h5>Fri</h5>
+                    <span class="forecast-info">
+                        <ion-icon name="partly-sunny-outline" class="forecast-icon"></ion-icon>
+                        <p>partly-sunny</p>
+                    </span>
+                    <span class="temp-range">22° <p>/ 29°</p></span>
+                </li>
+                <hr>
+                <li class="svn-day-item">
+                    <h5>Sat</h5>
+                    <span class="forecast-info">
+                        <ion-icon name="cloud-outline" class="forecast-icon"></ion-icon>
+                        <p>cloudy</p>
+                    </span>
+                    <span class="temp-range">20° <p>/ 27°</p></span>
+                </li>
+                <hr>
+                <li class="svn-day-item">
+                    <h5>Sun</h5>
+                    <span class="forecast-info">
+                        <ion-icon name="sunny-outline" class="forecast-icon"></ion-icon>
+                        <p>sunny</p>
+                    </span>
+                    <span class="temp-range">24° <p>/ 32°</p></span>
+                </li>
+             </ul>
         </footer>
     </div>
     
