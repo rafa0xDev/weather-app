@@ -270,7 +270,7 @@ body {
 
 .svn-day-forecast h3{
     font-size: 15px;
-    margin: 25px 13px;
+    margin: 15px 13px 20px 0px;
     color:  #9ca3af;
 }
 
@@ -284,7 +284,7 @@ body {
 .svn-day-item {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .svn-day-item h5 {
@@ -294,16 +294,22 @@ body {
     color: #9ca3af;
 }
 
+.svn-day-forecast hr {
+    border: 0.1px solid rgb(125, 125, 125);
+    margin: 0;
+}
+
 .forecast-info {
     display: flex;
     align-items: center;
     gap: 15px;
-    width: 180px;
+    width: 150px;
 }
+
 
 .forecast-info ion-icon {
     font-size: 40px;
-    color: white;
+    color: cornflowerblue;
 }
 
 .temp-range {
@@ -314,6 +320,7 @@ body {
     flex-direction: row;
     align-items: center;
 }
+
 .temp-range p {
     margin-left: 5px;
     color: #9ca3af;
