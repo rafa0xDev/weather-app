@@ -1,4 +1,3 @@
-
 async function getWeather(city) {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
     const data = await response.json();
@@ -17,11 +16,25 @@ async function getWeather(city) {
 
 }
 
+async function getForecast(city) {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`)
+    const data = await response.json();
+    console.log(data);
+
+    const forecastItem = document.querySelectorAll('.forecast-item .temp');
+    const time = document.querySelectorAll('.forecast-item .time');
+    for (let i = 0; i < forecastItem.length; i++) {
+        time[i].textContent = `${data.list[i].dt_txt.split(' ')[1].split(':').slice(0, 2).join(':')}`
+        forecastItem[i].textContent = `${Math.round(data.list[i].main.temp - 273.15)}°`;
+    }
+}
+
 const searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         const city = searchInput.value;
         getWeather(city);
+        getForecast(city);
     } else {
         return;
     }

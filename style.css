@@ -161,7 +161,8 @@ body {
 .todays-forecast h3{
     font-size: 15px;
     margin-bottom: 13px;
-    color: #9ca3af;
+    color: white;
+    font-weight: 600;
 }
 
 .forecast-list {
@@ -183,7 +184,7 @@ body {
     color: #9ca3af;
 }
 
-.forecast-item-last {
+.forecast-item:last-child {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,6 +192,7 @@ body {
     padding: 10px;
     gap: 15px;
     color: #9ca3af;
+    border: none;
 }
 
 /* air conditions  */
@@ -216,7 +218,7 @@ body {
 .air-condition-title {
     font-size: 15px;
     font-weight: 600;
-    color: #9ca3af;
+    color: white;
 }
 .condition-top button{
     background-color: cornflowerblue;
@@ -272,7 +274,7 @@ body {
 .svn-day-forecast h3{
     font-size: 15px;
     margin: 15px 13px 20px 0px;
-    color:  #9ca3af;
+    color: white;
 }
 
 .svn-day-content {
