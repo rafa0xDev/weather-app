@@ -19,13 +19,23 @@ async function getWeather(city) {
 async function getForecast(city) {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`)
     const data = await response.json();
-    console.log(data);
 
     const forecastItem = document.querySelectorAll('.forecast-item .temp');
     const time = document.querySelectorAll('.forecast-item .time');
     for (let i = 0; i < forecastItem.length; i++) {
         time[i].textContent = `${data.list[i].dt_txt.split(' ')[1].split(':').slice(0, 2).join(':')}`
         forecastItem[i].textContent = `${Math.round(data.list[i].main.temp - 273.15)}°`;
+    }
+
+    const frcDay = document.querySelectorAll('.frc-day');
+    const frcDesc = document.querySelectorAll('.frc-desc');
+    const frclist = document.querySelectorAll('.svn-day-content .svn-day-item');
+    const frcTemp = document.querySelectorAll('.frc-temp');
+    
+    for (let i = 0; i < frclist.length; i++) {
+        frcDay[i].textContent = new Date(data.list[i * 8].dt_txt).toLocaleDateString('en-US', { weekday: 'short' });
+        frcDesc[i].textContent = data.list[i * 8].weather[0].description;
+        frcTemp[i].innerHTML = `${Math.round(data.list[i * 8].main.temp - 273.15)}° <p class="frc-range">/ ${Math.round(data.list[i * 8].main.temp_max - 273.15)}°</p>`;
     }
 }
 
@@ -40,6 +50,7 @@ searchInput.addEventListener('keypress', function (e) {
     }
 });
 
+getForecast('Jakarta');
 
 
 

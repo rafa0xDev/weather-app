@@ -315,7 +315,7 @@ body {
     color: cornflowerblue;
 }
 
-.temp-range {
+.frc-temp {
     font-size: 18px;
     font-weight: 600;
     text-align: right;
@@ -324,7 +324,7 @@ body {
     align-items: center;
 }
 
-.temp-range p {
+.frc-range {
     margin-left: 5px;
     color: #9ca3af;
 }
