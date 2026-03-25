@@ -100,13 +100,13 @@ body {
     border-left: 3px solid cornflowerblue;
 }
 
-.search-bar input {
+.search-bar input{
     border: none;
     outline: none;
     font-size: 16px;
     width: 800px;
     background: #24262b;
-    color: cornflowerblue;
+    color: cornflowerblue !important;
 }
 
 .search-bar ion-icon {
@@ -136,7 +136,7 @@ body {
 
 .weather-temp {
     margin-top: 3rem;
-    font-size: 30px;
+    font-size: 60px;
     font-weight: 600;
 }
 

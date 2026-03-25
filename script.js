@@ -7,12 +7,13 @@ async function getWeather(city) {
     const weatherTemp = document.querySelector('.weather-temp');
     const realfeelval = document.getElementById('RealFeel-value');
     const windval = document.getElementById('Wind-value');
+    const rainchance = document.getElementById('rainchanceval');
 
     cityName.textContent = data.name;
     weatherTemp.textContent = `${Math.round(data.main.temp - 273.15)}°`;
     realfeelval.textContent = `${Math.round(data.main.feels_like - 273.15)}°`;
     windval.textContent = `${data.wind.speed} km/h`;
-    
+    rainchance.textContent = `${data.weather[0].description}`;
 
 }
 
