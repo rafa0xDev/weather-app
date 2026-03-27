@@ -1,16 +1,4 @@
-async function getWeather(city) {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
-    const data = await response.json();
-    console.log(data);
-
-    const cityName = document.querySelector('.city-name');
-    const weatherTemp = document.querySelector('.weather-temp');
-    const realfeelval = document.getElementById('RealFeel-value');
-    const windval = document.getElementById('Wind-value');
-    const rainchance = document.getElementById('rainchanceval');
-
-    
-    const weatherIcon = {
+const weatherIcon = {
         'clear': 'https://openweathermap.org/img/wn/01d.png',
         'clouds': 'https://openweathermap.org/img/wn/02d.png',
         'rain': 'https://openweathermap.org/img/wn/10d.png',
@@ -21,6 +9,17 @@ async function getWeather(city) {
         'drizzle': 'https://openweathermap.org/img/wn/09d.png',
         'haze': 'https://openweathermap.org/img/wn/50d.png',
     }
+
+async function getWeather(city) {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+    const data = await response.json();
+    console.log(data);
+
+    const cityName = document.querySelector('.city-name');
+    const weatherTemp = document.querySelector('.weather-temp');
+    const realfeelval = document.getElementById('RealFeel-value');
+    const windval = document.getElementById('Wind-value');
+    const rainchance = document.getElementById('rainchanceval');
 
     const weatherMain = data.weather[0].main.toLowerCase();
     const iconUrl = weatherIcon[weatherMain] || 'https://openweathermap.org/img/wn/01d.png';
@@ -40,18 +39,6 @@ async function getWeather(city) {
 async function getForecast(city) {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`)
     const data = await response.json();
-
-    const weatherIcon = {
-        'clear': 'https://openweathermap.org/img/wn/01d.png',
-        'clouds': 'https://openweathermap.org/img/wn/02d.png',
-        'rain': 'https://openweathermap.org/img/wn/10d.png',
-        'thunderstorm': 'https://openweathermap.org/img/wn/11d.png',
-        'snow': 'https://openweathermap.org/img/wn/13d.png',
-        'mist': 'https://openweathermap.org/img/wn/50d.png',
-        'fog':  'https://openweathermap.org/img/wn/50d.png',
-        'drizzle': 'https://openweathermap.org/img/wn/09d.png',
-        'haze': 'https://openweathermap.org/img/wn/50d.png',
-    }
 
     // 3-hour forecast
     const forecastItem = document.querySelectorAll('.forecast-item .temp');
