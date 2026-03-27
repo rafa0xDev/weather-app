@@ -144,6 +144,11 @@ body {
     margin-left: 25rem;
 }
 
+.weather-icon img {
+    width: 180px;
+    height: 180px;
+}
+
 .weather-icon ion-icon {
     font-size: 180px;
     color: cornflowerblue;
@@ -261,6 +266,7 @@ body {
     margin-left: 2rem;
 }
 
+/* 3 hour forecast */
 .svn-day-forecast {
     background-color: #24262b;
     border-radius: 15px;
