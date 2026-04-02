@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=air" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Atmos AI</title>
 </head>
 <body>
     <div class="dashboard-app-wrapper">
+
+        <!-- NAVBAR -->
         <nav class="nav-section">
             <div class="logo">
-                <a class="home"><ion-icon name="cloudy-night-sharp"></ion-icon></a>
+                <a class="home">
+                    <ion-icon name="cloudy-night-sharp"></ion-icon>
+                </a>
+                <span class="logo-label">ATMOS</span>
             </div>
             <div class="nav-menu">
                 <ul>
-                    <li>
+                    <li class="active">
                         <a href="#home">
                             <ion-icon name="cloud-outline"></ion-icon>
                             <span>Weather</span>
@@ -41,160 +48,180 @@
                     </li>
                 </ul>
             </div>
+            <div class="nav-bottom">
+                <div class="nav-dot active"></div>
+                <div class="nav-dot"></div>
+                <div class="nav-dot"></div>
+            </div>
         </nav>
+
+        <!-- MAIN CONTENT -->
         <main class="main-content">
+
+            <!-- SEARCH BAR -->
             <section class="search-bar">
                 <ion-icon name="search-outline"></ion-icon>
-                <input type="text" placeholder="Search for a city" id="searchInput">
+                <input type="text" placeholder="Search for a city..." id="searchInput">
+                <span class="search-hint">Press Enter</span>
             </section>
 
+            <!-- CURRENT WEATHER -->
             <section class="current-weather">
                 <div class="weather-info">
                     <div class="weather-city">
+                        <div class="city-tag">
+                            <ion-icon name="location-sharp"></ion-icon>
+                            <span>CURRENT LOCATION</span>
+                        </div>
                         <h2 class="city-name" id="cityName">Madrid</h2>
                         <p class="weather-desc" id="rainchanceval">Chance of rain: 0%</p>
                     </div>
-
-                    <div class="weather-temp" >
-                        <h1 id="weatherTemp"></h1>
+                    <div class="weather-temp">
+                        <h1 id="weatherTemp">--°</h1>
                     </div>
                 </div>
-                
                 <div class="weather-icon" id="weather-icon">
                     <ion-icon name="sunny-outline"></ion-icon>
                 </div>
             </section>
 
+            <!-- TODAY'S FORECAST -->
             <section class="todays-forecast">
-                <h3>Today's Forecast</h3>
-
+                <div class="section-header">
+                    <h3>TODAY'S FORECAST</h3>
+                    <div class="header-line"></div>
+                </div>
                 <ul class="forecast-list">
                     <li class="forecast-item">
                         <span class="time">6:00 AM</span>
                         <ion-icon name="cloud-outline" class="forecast-icon"></ion-icon>
                         <span class="temp">25°</span>
                     </li>
-
                     <li class="forecast-item">
-                        <span class="time">6:00 AM</span>
+                        <span class="time">9:00 AM</span>
                         <ion-icon name="cloud-outline" class="forecast-icon"></ion-icon>
                         <span class="temp">25°</span>
                     </li>
-
                     <li class="forecast-item">
-                        <span class="time">6:00 AM</span>
+                        <span class="time">12:00 PM</span>
                         <ion-icon name="cloud-outline" class="forecast-icon"></ion-icon>
                         <span class="temp">25°</span>
                     </li>
-
                     <li class="forecast-item">
-                        <span class="time">6:00 AM</span>
+                        <span class="time">3:00 PM</span>
                         <ion-icon name="cloud-outline" class="forecast-icon"></ion-icon>
                         <span class="temp">25°</span>
                     </li>
-
                     <li class="forecast-item">
-                        <span class="time">6:00 AM</span>
+                        <span class="time">6:00 PM</span>
                         <ion-icon name="cloud-outline" class="forecast-icon"></ion-icon>
                         <span class="temp">25°</span>
                     </li>
-
                     <li class="forecast-item">
-                        <span class="time">6:00 AM</span>
+                        <span class="time">9:00 PM</span>
                         <ion-icon name="cloud-outline" class="forecast-icon"></ion-icon>
                         <span class="temp">25°</span>
                     </li>
-
                     <li class="forecast-item">
-                        <span class="time">6:00 AM</span>
+                        <span class="time">12:00 AM</span>
                         <ion-icon name="cloud-outline" class="forecast-icon"></ion-icon>
                         <span class="temp">25°</span>
                     </li>
                 </ul>
             </section>
-            <section class="air-conditions">
-                <span class="condition-top">
-                    <h3 class="air-condition-title">Air Condition</h3>
 
+            <!-- AIR CONDITIONS -->
+            <section class="air-conditions">
+                <div class="section-header">
+                    <h3>AIR CONDITIONS</h3>
+                    <div class="header-line"></div>
                     <button class="see-more-btn">See More</button>
-                </span>
-            
+                </div>
                 <ul class="conditions-list">
                     <li class="condition-item">
-                        <span class="condition-label" ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill=" #9ca3af"><path d="M480-120q-83 0-141.5-58.5T280-320q0-48 21-89.5t59-70.5v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q38 29 59 70.5t21 89.5q0 83-58.5 141.5T480-120Zm0-80q50 0 85-35t35-85q0-29-12.5-54T552-416l-32-24v-280q0-17-11.5-28.5T480-760q-17 0-28.5 11.5T440-720v280l-32 24q-23 17-35.5 42T360-320q0 50 35 85t85 35Zm0-120Z"/></svg>Real Feel</span>
-                        <span class="condition-value" id="RealFeel-value">30°</span>
+                        <span class="condition-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M480-120q-83 0-141.5-58.5T280-320q0-48 21-89.5t59-70.5v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q38 29 59 70.5t21 89.5q0 83-58.5 141.5T480-120Zm0-80q50 0 85-35t35-85q0-29-12.5-54T552-416l-32-24v-280q0-17-11.5-28.5T480-760q-17 0-28.5 11.5T440-720v280l-32 24q-23 17-35.5 42T360-320q0 50 35 85t85 35Zm0-120Z"/></svg>
+                            Real Feel
+                        </span>
+                        <span class="condition-value" id="RealFeel-value">--°</span>
                     </li>
-
                     <li class="condition-item">
-                        <span class="condition-label"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill=" #9ca3af"><path d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"/></svg> Wind</span>
-                        <span class="condition-value" id="Wind-value">0.2 km/h</span>
+                        <span class="condition-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"/></svg>
+                            Wind
+                        </span>
+                        <span class="condition-value" id="Wind-value">-- km/h</span>
                     </li>
-
                     <li class="condition-item">
-                        <span class="condition-label"><ion-icon name="rainy-outline"></ion-icon> Chance of rain</span>
-                        <span class="condition-value" id="RainChance-value">-</span>
+                        <span class="condition-label">
+                            <ion-icon name="rainy-outline"></ion-icon>
+                            Rain Chance
+                        </span>
+                        <span class="condition-value" id="RainChance-value">--%</span>
                     </li>
-
                     <li class="condition-item">
-                        <span class="condition-label"><ion-icon name="sunny-outline"></ion-icon> UV Index</span>
-                        <span class="condition-value" id="UVIndex-value">-</span>
-                    </li>        
+                        <span class="condition-label">
+                            <ion-icon name="sunny-outline"></ion-icon>
+                            UV Index
+                        </span>
+                        <span class="condition-value" id="UVIndex-value">--</span>
+                    </li>
                 </ul>
             </section>
         </main>
+
+        <!-- 7-DAY FORECAST SIDEBAR -->
         <footer class="svn-day-forecast">
-            <h3>7-Day Forecast</h3>
-            <!-- 7-day forecast content goes here -->
-             <ul class="svn-day-content">
+            <div class="section-header">
+                <h3>7-DAY FORECAST</h3>
+                <div class="header-line"></div>
+            </div>
+            <ul class="svn-day-content">
                 <li class="svn-day-item">
-                    <h5 class="frc-day">Fri</h5>
+                    <h5 class="frc-day">Mon</h5>
                     <span class="forecast-info">
-                        <ion-icon name="partly-sunny-outline" class="frc-icon"></ion-icon>
-                        <p class="frc-desc">partly-sunny</p>
+                        <img src="" class="frc-icon"></img>
+                        <p class="frc-desc">Partly Cloudy</p>
                     </span>
                     <span class="frc-temp">22° <p class="frc-range">/ 29°</p></span>
                 </li>
-                <hr>
                 <li class="svn-day-item">
-                    <h5 class="frc-day">Fri</h5>
+                    <h5 class="frc-day">Tue</h5>
                     <span class="forecast-info">
-                        <ion-icon name="partly-sunny-outline" class="frc-icon"></ion-icon>
-                        <p class="frc-desc">partly-sunny</p>
+                        <img src="" class="frc-icon"></img>
+                        <p class="frc-desc">Partly Cloudy</p>
                     </span>
                     <span class="frc-temp">22° <p class="frc-range">/ 29°</p></span>
                 </li>
-                <hr>
                 <li class="svn-day-item">
-                    <h5 class="frc-day">Fri</h5>
+                    <h5 class="frc-day">Wed</h5>
                     <span class="forecast-info">
-                        <ion-icon name="partly-sunny-outline" class="frc-icon"></ion-icon>
-                        <p class="frc-desc">partly-sunny</p>
+                        <img src="" class="frc-icon"></img>
+                        <p class="frc-desc">Sunny</p>
                     </span>
                     <span class="frc-temp">22° <p class="frc-range">/ 29°</p></span>
                 </li>
-                <hr>
+                <li class="svn-day-item">
+                    <h5 class="frc-day">Thu</h5>
+                    <span class="forecast-info">
+                        <img src="" class="frc-icon"></img>
+                        <p class="frc-desc">Sunny</p>
+                    </span>
+                    <span class="frc-temp">18° <p class="frc-range">/ 24°</p></span>
+                </li>
                 <li class="svn-day-item">
                     <h5 class="frc-day">Fri</h5>
                     <span class="forecast-info">
-                        <ion-icon name="partly-sunny-outline" class="frc-icon"></ion-icon>
-                        <p class="frc-desc">partly-sunny</p>
+                        <img src="" class="frc-icon"></img>
+                        <p class="frc-desc">Sunny</p>
                     </span>
-                    <span class="frc-temp">22° <p class="frc-range">/ 29°</p></span>
+                    <span class="frc-temp">26° <p class="frc-range">/ 33°</p></span>
                 </li>
-                <hr>
-                <li class="svn-day-item">
-                    <h5 class="frc-day">Fri</h5>
-                    <span class="forecast-info">
-                        <ion-icon name="partly-sunny-outline" class="frc-icon"></ion-icon>
-                        <p class="frc-desc">partly-sunny</p>
-                    </span>
-                    <span class="frc-temp">22° <p class="frc-range">/ 29°</p></span>
-                </li>
-                <hr>
-             </ul>
+            </ul>
         </footer>
+
     </div>
-    
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="config.js"></script>

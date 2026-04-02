@@ -16,7 +16,7 @@ async function getWeather(city) {
     console.log(data);
 
     const cityName = document.querySelector('.city-name');
-    const weatherTemp = document.querySelector('.weather-temp');
+    const weatherTemp = document.getElementById('weatherTemp');
     const realfeelval = document.getElementById('RealFeel-value');
     const windval = document.getElementById('Wind-value');
     const rainchance = document.getElementById('rainchanceval');
@@ -62,7 +62,7 @@ async function getForecast(city) {
         frcDay[i].textContent = new Date(data.list[i * 8].dt_txt).toLocaleDateString('en-US', { weekday: 'short' });
         frcDesc[i].textContent = data.list[i * 8].weather[0].description;
         frcTemp[i].innerHTML = `${Math.round(data.list[i * 8].main.temp - 273.15)}° <p class="frc-range">/ ${Math.round(data.list[i * 8].main.temp_max - 273.15)}°</p>`;
-        frcIcon[i].outerHTML = `<img src="${weatherIcon[data.list[i * 8].weather[0].main.toLowerCase()] || 'https://openweathermap.org/img/wn/01d.png'}" alt="${data.list[i * 8].weather[0].main}">`;
+        frcIcon[i].src = weatherIcon[data.list[i * 8].weather[0].main.toLowerCase()] || 'https://openweathermap.org/img/wn/01d.png';
     }
 }
 
@@ -77,6 +77,8 @@ searchInput.addEventListener('keypress', function (e) {
     }
 });
 
+getForecast('New York');
 getWeather('New York');
+
 
 
