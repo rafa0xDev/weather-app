@@ -1,3 +1,5 @@
+const API_KEY = '055579dd0aa35308e7f9ba350476caa8';
+
 const weatherIcon = {
         'clear': 'https://openweathermap.org/img/wn/01d.png',
         'clouds': 'https://openweathermap.org/img/wn/02d.png',
